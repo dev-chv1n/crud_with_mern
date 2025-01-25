@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+body{
+  background-color: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins", serif;
+}
+
+header{
+  background: #fff;
+}
+
+header .container{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a{
+  text-decoration: none;
+  color:#3a3a3a;
+}
+
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+/* hompage */
+.home{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+/* workout-detail */
+.workout-detail{
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgb(218, 218, 218);
+}
+
+.workout-detail h3{
+  color: #1aac83;
+  font-size: 25px;
+  margin: .5rem 0;
+}
+
+.workout-detail p{
+  color: rgb(44, 44, 44);
+  font-size: 16px;
+  margin: .5rem 0  ;
+}
+
+.workoutform h2{
+  margin-bottom: 0;
+}
+
+.workout-detail span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #c6c6c6;
+  padding: 10px 10px;
+  border-radius: 50px;
+  color: #3a3a3a;
+  transition: .1s all;
+  font-size: larger;
+  display: flex;
+}
+
+
+.workout-detail span:hover{
+  cursor: pointer;
+  background-color: #e7195a;
+  color: #fff;
+}
+
+/* form */
+.create{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.create label {
+  margin: 1rem 0 .2rem 0;
+}
+
+.create input{
+  padding: .5rem;
+  font-size: 16px;
+  border-radius: 5px;
+  border: .2px solid rgb(191, 191, 191);
+}
+
+.create input:focus{
+  outline: none;
+}
+
+.create button{
+  background-color: #1aac83;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  padding: 10px;
+  color: #f1f1f1;
+  font-family: "Poppins", serif;
+  font-size: 16px;
+  transition: .1s all ;
+}
+
+.create button:hover{
+  background-color: #0dc490;
+  cursor: pointer;
+}
+
+.create button:active{
+  background-color: #268b6e;
+  cursor: pointer;
+}
+
+.warning{
+  background-color: #ffbdbd;
+  color: #e7195a;
+  border: 1px solid #e7195a;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: 500;
+
+}
+
+input.error{
+  border: 1px solid #e7195a;
+}
+
+
+
+
+
+
+
