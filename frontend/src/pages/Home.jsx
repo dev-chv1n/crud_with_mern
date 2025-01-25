@@ -5,13 +5,15 @@ import { UseWorkoutsContext } from "../hooks/UseWorkoutsContext"
 import WorkoutsDetails from '../components/WorkoutDetails'
 import WorkoutForm from '../components/WorkoutForm'
 
+
 const Home = () => {
     const { workouts, dispatch } = UseWorkoutsContext()
-
+    const PORT = process.env.PORT
+    
     useEffect(() => {
         const fetchWorkouts = async () => {
             try {
-                const response = await fetch('http://localhost:4000/api/workouts')
+                const response = await fetch('http://localhost:${PORT}/api/workouts')
                 const json = await response.json();
                 if (response.ok) {
                     dispatch({ type: 'SET_WORKOUTS', payload: json })
