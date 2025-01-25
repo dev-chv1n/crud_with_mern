@@ -7,30 +7,30 @@ import WorkoutForm from '../components/WorkoutForm'
 
 
 const Home = () => {
-    const { workouts, dispatch } = UseWorkoutsContext()
-    const PORT = process.env.PORT
-    
+    const { workouts, dispatch } = UseWorkoutsContext();
+    const API_PORT = import.meta.env.VITE_API_PORT;
+
     useEffect(() => {
         const fetchWorkouts = async () => {
             try {
-                const response = await fetch('http://localhost:${PORT}/api/workouts')
+                const response = await fetch(`http://localhost:${API_PORT}/api/workouts`);
                 const json = await response.json();
                 if (response.ok) {
-                    dispatch({ type: 'SET_WORKOUTS', payload: json })
+                    dispatch({ type: 'SET_WORKOUTS', payload: json });
                 }
             } catch (error) {
-                console.error('Error fetching workouts:', error.message)
+                console.error('Error fetching workouts:', error.message);
             }
         };
 
         fetchWorkouts();
-    }, []);
+    }, [API_PORT, dispatch]);
 
     return (
         <div className="container home">
             <div className="workouts">
                 {workouts && workouts.map((items) => ( // ถ้า workouts เป็น null หรือ undefined จะไม่ .map ให้
-                    <WorkoutsDetails key={items._id} workout={items} /> 
+                    <WorkoutsDetails key={items._id} workout={items} />
                 ))}
             </div>
             <div className="workoutform">
