@@ -70,6 +70,7 @@ const createWorkout = async (req, res) => {
         res.status(400).json({ error: error.message })
     }
 }
+
 // delete a workout
 const deleteWorkout = async (req, res) => {
     const id = req.params.id;
@@ -94,6 +95,7 @@ const deleteWorkout = async (req, res) => {
 // update a workout
 const updateWorkout = async (req, res) => {
     const id = req.params.id
+
 
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
