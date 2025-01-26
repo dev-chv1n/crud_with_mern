@@ -217,6 +217,10 @@ input.error{
   border: 1px solid #e7195a;
 }
 
+input{
+  font-family: "Poppins", serif;
+}
+
 
 
 
