@@ -1,1 +1,12 @@
-CRUD Web Application ทำขึ้นมาเพื่อเรียนรู้วิธีใช้ mongoDB Express React NodeJS (MERN) 
+##This repository uses MongoDB, Express, React, and Node.js to create a CRUD (Create, Read, Update, Delete) application.
+
+## Technologies Used
+  - **Backend:** Express (NodeJS)
+  - **Frontend:** React
+  - **Database:** MonngoDB
+  - **Other Libraries :**
+    - mongoose
+    - dotenv
+    - cors
+    - date-fns
+    - vite
