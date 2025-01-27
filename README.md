@@ -4,7 +4,7 @@
   - **Backend:** Express (NodeJS)
   - **Frontend:** React
   - **Database:** MonngoDB
-  - **Other Libraries :**
+  - **Other Libraries & Tools :**
     - mongoose
     - dotenv
     - cors
